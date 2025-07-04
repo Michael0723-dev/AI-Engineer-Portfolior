@@ -2,7 +2,7 @@ name: Build & Push Docker Image
 
 on:
   push:
-    branches: [dev]
+    branches: [main]
 
 env:
   REGISTRY: docker.io
