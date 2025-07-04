@@ -1,8 +1,9 @@
 name: Build & Push Docker Image
 
 on:
-  push:
-    branches: [main] # adjust based on your target branch
+  pull_request:
+    types: [closed]
+    branches: [main]
 
 env:
   REGISTRY: docker.io
