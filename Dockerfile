@@ -1,27 +1,20 @@
 # Install dependencies only when needed
-FROM node:20-alpine AS deps
+FROM node:22-alpine AS deps
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json pnpm-lock.yaml* package-lock.json* yarn.lock* ./
-RUN \
-  if [ -f pnpm-lock.yaml ]; then \
-    npm install -g pnpm && pnpm install --frozen-lockfile; \
-  elif [ -f yarn.lock ]; then \
-    yarn install --frozen-lockfile; \
-  else \
-    npm ci; \
-  fi
+RUN pnpm ci;
 
 # Rebuild the source code only when needed
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npm run build
 
 # Production image, copy all the files and run next
-FROM node:20-alpine AS runner
+FROM node:22-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
