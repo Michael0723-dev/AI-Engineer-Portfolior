@@ -97,7 +97,7 @@ export function HeroSection() {
                 className={`transition-all duration-1000 delay-500 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
               >
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Senior AI Engineer with 8 years of experience in machine learning, deep learning, and AI system architecture. Passionate about creating intelligent solutions that make a real impact.
+                  Senior AI Engineer with 9 years of experience in machine learning, deep learning, and AI system architecture. Passionate about creating intelligent solutions that make a real impact.
                 </p>
               </div>
 
@@ -162,7 +162,7 @@ export function HeroSection() {
                   {/* Photo */}
                   <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 group-hover:border-white/40 transition-all duration-500 shadow-strong group-hover:shadow-glow">
                     <img
-                      src="/placeholder.svg?height=420&width=420&text=Alex+Chen"
+                      src="/face.jpeg"
                       alt="Alex Chen - AI Engineer"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />

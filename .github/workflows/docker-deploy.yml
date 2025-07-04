@@ -7,6 +7,7 @@ on:
 env:
   REGISTRY: docker.io
   IMAGE_NAME: michaelterrydevdocker/portfolio
+  CONTAINER_NAME: portfolio
 
 jobs:
   build-and-push:
@@ -44,7 +45,22 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      # - name: Trigger Vercel Deployment
-      #   run: |
-      #     echo "Docker image built and pushed successfully"
-      #     echo "Image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest"
+  # deploy:
+  #   needs: build-and-push
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - name: Checkout Repository
+  #       uses: actions/checkout@v4
+
+  #     - name: Deploy to EC2 via SSH
+  #       uses: appleboy/ssh-action@v1.0.3
+  #       with:
+  #         host: ${{ secrets.EC2_HOST }}
+  #         username: ${{ secrets.EC2_USER }}
+  #         key: ${{ secrets.EC2_SSH_KEY }}
+  #         script: |
+  #           docker stop ${{ env.CONTAINER_NAME }} || true
+  #           docker rm ${{ env.CONTAINER_NAME }} || true
+  #           docker rmi -f ${{ env.IMAGE_NAME }}:latest || true
+  #           docker run -d --name ${{ env.CONTAINER_NAME }} -p 3000:3000 ${{ env.IMAGE_NAME }}:latest

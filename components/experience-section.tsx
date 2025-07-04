@@ -9,7 +9,7 @@ const experiences = [
     company: "TechCorp AI",
     location: "San Francisco, CA",
     period: "2021 - Present",
-    duration: "3+ years",
+    duration: "4+ years",
     description: "Leading AI initiatives and architecting scalable ML systems for enterprise clients.",
     achievements: [
       "Architected and deployed ML pipeline serving 50M+ daily predictions",
@@ -139,7 +139,7 @@ export function ExperienceSection() {
                               <Calendar className="h-4 w-4" />
                               <span>{exp.period}</span>
                             </div>
-                            <Badge variant="outline" className="bg-gradient-accent text-white border-0">
+                            <Badge variant="outline" className="bg-gradient-accent text-gray-900 dark:text-white border-0">
                               {exp.duration}
                             </Badge>
                           </div>
