@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json pnpm-lock.yaml* package-lock.json* yarn.lock* ./
-RUN pnpm ci;
+RUN npm install -g pnpm && pnpm ci;
 
 # Rebuild the source code only when needed
 FROM node:22-alpine AS builder
