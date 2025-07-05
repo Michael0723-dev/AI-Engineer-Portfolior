@@ -162,7 +162,7 @@ export function HeroSection() {
                   {/* Photo */}
                   <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 group-hover:border-white/40 transition-all duration-500 shadow-strong group-hover:shadow-glow">
                     <img
-                      src="/placeholder.svg?height=420&width=420&text=Alex+Chen"
+                      src="/face.jpeg"
                       alt="Alex Chen - AI Engineer"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
