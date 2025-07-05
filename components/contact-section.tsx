@@ -39,7 +39,6 @@ try {
 👤 <b>Name:</b> ${formData.name}
 📧 <b>Email:</b> ${formData.email}
 💬 <b>Message:</b> ${formData.message}
-📅 <b>Timestamp:</b> {new Date().toISOString().replace('T', ' ').replace(/\.\d{3}Z/, '')}
         `
 
     await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {

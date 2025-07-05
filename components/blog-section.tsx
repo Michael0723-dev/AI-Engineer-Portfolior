@@ -9,7 +9,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism"
 import remarkGfm from "remark-gfm"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const blogPosts = [
   {
@@ -264,6 +264,16 @@ export function BlogSection() {
 
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [selectedPost, setSelectedPost] = useState<(typeof blogPosts)[0] | null>(null)
+
+  // Scroll to blog section when a post is selected
+  useEffect(() => {
+    if (selectedPost) {
+      const blogElement = document.getElementById('blog')
+      if (blogElement) {
+        blogElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+  }, [selectedPost])
 
   const filteredPosts =
     selectedCategory === "All" ? blogPosts : blogPosts.filter((post) => post.category === selectedCategory)

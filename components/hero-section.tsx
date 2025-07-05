@@ -97,7 +97,7 @@ export function HeroSection() {
                 className={`transition-all duration-1000 delay-500 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
               >
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Senior AI Engineer with 8 years of experience in machine learning, deep learning, and AI system architecture. Passionate about creating intelligent solutions that make a real impact.
+                  Senior AI Engineer with 9 years of experience in machine learning, deep learning, and AI system architecture. Passionate about creating intelligent solutions that make a real impact.
                 </p>
               </div>
 

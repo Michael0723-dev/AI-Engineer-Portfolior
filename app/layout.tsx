@@ -7,10 +7,13 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Alex Chen - AI Engineer Portfolio",
+  title: "Alex Chen - Senior AI Engineer",
   description:
-    "Senior AI Engineer with 8 years of experience in machine learning, deep learning, and AI system architecture.",
-    generator: 'v0.dev'
+    "Senior AI Engineer with 9 years of experience in machine learning, deep learning, and AI system architecture.",
+  generator: 'v0.dev',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
@@ -20,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

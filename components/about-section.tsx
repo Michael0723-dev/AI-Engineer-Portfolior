@@ -104,7 +104,7 @@ export function AboutSection() {
                 My Story
               </h3>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p className="text-lg hover:text-foreground transition-colors duration-300">My journey in AI began 8 years ago when I was fascinated by the potential of machines to learn and adapt. Since then, I've dedicated my career to developing cutting-edge AI solutions that solve real-world problems.</p>
+                <p className="text-lg hover:text-foreground transition-colors duration-300">My journey in AI began 9 years ago when I was fascinated by the potential of machines to learn and adapt. Since then, I've dedicated my career to developing cutting-edge AI solutions that solve real-world problems.</p>
                 <p className="text-lg hover:text-foreground transition-colors duration-300">Throughout my career, I've had the privilege of working with leading tech companies and research institutions, contributing to breakthrough projects in computer vision, natural language processing, and autonomous systems.</p>
                 <p className="text-lg hover:text-foreground transition-colors duration-300">I believe in the transformative power of AI and am committed to building ethical, responsible AI systems that benefit humanity. When I'm not coding, you can find me mentoring aspiring AI engineers or contributing to open-source projects.</p>
               </div>

@@ -10,6 +10,11 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "standalone",
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
+  swcMinify: true,
+  reactStrictMode: true,
 }
 
 export default nextConfig

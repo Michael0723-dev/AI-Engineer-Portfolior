@@ -23,7 +23,7 @@ const portfolioKnowledge = {
   personal: {
     name: "Alex Chen",
     title: "Senior AI Engineer",
-    experience: "8 years",
+    experience: "9 years",
     location: "San Francisco, CA",
     email: "alex.chen@email.com",
     phone: "+1 (555) 123-4567",
@@ -101,7 +101,7 @@ function generateBotResponse(userMessage: string): string {
 
   // Personal information
   if (message.includes("name") || message.includes("who are you")) {
-    return `Hi! I'm Alex Chen, a Senior AI Engineer with 8 years of experience in machine learning, deep learning, and AI system architecture. I'm passionate about creating intelligent solutions that make a real impact.`
+    return `Hi! I'm Alex Chen, a Senior AI Engineer with 9 years of experience in machine learning, deep learning, and AI system architecture. I'm passionate about creating intelligent solutions that make a real impact.`
   }
 
   if (message.includes("contact") || message.includes("email") || message.includes("phone")) {
@@ -139,7 +139,7 @@ function generateBotResponse(userMessage: string): string {
 
   // Experience
   if (message.includes("experience") || message.includes("work") || message.includes("job")) {
-    return `Alex has 8 years of AI/ML experience:
+    return `Alex has 9 years of AI/ML experience:
 
 🏢 **Senior AI Engineer** at TechCorp AI (2021-Present)
 - Led ML pipeline serving 50M+ daily predictions
@@ -214,7 +214,7 @@ He's also received awards like the AI Innovation Award and Best Paper Award at I
 
   // General AI/ML questions
   if (message.includes("machine learning") || message.includes("artificial intelligence") || message.includes("ai")) {
-    return `Alex is passionate about AI and machine learning! With 8 years of experience, he's worked on everything from research to production systems. He believes in building ethical, responsible AI that benefits humanity. His expertise spans computer vision, NLP, deep learning, and MLOps.`
+    return `Alex is passionate about AI and machine learning! With 9 years of experience, he's worked on everything from research to production systems. He believes in building ethical, responsible AI that benefits humanity. His expertise spans computer vision, NLP, deep learning, and MLOps.`
   }
 
   if (message.includes("team") || message.includes("leadership") || message.includes("manage")) {
